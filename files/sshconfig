@@ -1,18 +1,10 @@
 Host *
   ForwardAgent yes
 
-Host spesa
-  User spesa
-  HostName spesa.com.br
+Host thiagosampaio
+  User sampcode
+  HostName thiagosampaio.com.br
 
-Host simplesideias
-  User fnando
-  HostName simplesideias.com.br
-
-Host presentta
-  User root
-  HostName presentta.com.br
-
-Host codeplane
-  User deploy
-  HostName codeplane.com
+Host fixgram
+  User ubuntu
+  HostName fixgram.com.br
