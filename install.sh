@@ -6,6 +6,7 @@ cp files/inputrc ~/.inputrc
 cp files/npmrc ~/.npmrc
 cp files/pryrc ~/.pryrc
 cp files/gitignore ~/.gitignore
+cp files/osx ~/.osx
 
 mkdir -p ~/bin
 mkdir -p ~/.ssh
