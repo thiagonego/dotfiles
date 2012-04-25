@@ -10,11 +10,16 @@
 
 # this lets you hit tab to auto-complete a file or
 # directory name ignoring case
-set completion-ignore-case On
 
+set completion-ignore-case On
 set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
 set visible-stats on
 set show-all-if-ambiguous on
+set match-hidden-files off
+
+export HISTSIZE=5000
+export HISTFILESIZE=$HISTSIZE
+
