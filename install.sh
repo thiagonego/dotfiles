@@ -1,28 +1,22 @@
-echo "Criando os arquivos Dotfiles em /User/thiagosampaio"
-cp files/bash_profile ~/.bash_profile
+test -d ~/.dotfiles || mkdir -p ~/.dotfiles
+test -d ~/.dotfiles/scripts || mkdir -p ~/.dotfiles/scripts
+test -d ~/.ssh || mkdir -p ~/.ssh
+
 cp files/gitconfig ~/.gitconfig
 cp files/irbrc ~/.irbrc
-cp files/inputrc ~/.inputrc
 cp files/npmrc ~/.npmrc
 cp files/pryrc ~/.pryrc
 cp files/gitignore ~/.gitignore
-cp files/osx ~/.osx
-
-mkdir -p ~/bin
-mkdir -p ~/.ssh
+cp files/variaveis.sh ~/.dotfiles/variaveis.sh
 cp files/sshconfig ~/.ssh/config
+cp files/scripts/* ~/.dotfiles/scripts/
 
-sudo mkdir -p /etc/bash_completion
+sudo chmod +X ~/.dotfiles/variaveis.sh
 
-echo "Lendo o .bash_profile"
-source ~/.bash_profile
+source ~/.bashrc
 
-echo "Fim"
-
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
-# defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
-
-# open files/IR_Black.terminal
-
-#Quando eu colocar meu repositório de Gems volto essa configurações
-# cp files/gemrc ~/.gemrc
+cat <<EOF
+  Instalação concluída com sucesso.
+  Para concluir a instalação favor adicionar ao arquivo ~/bashrc a seguinte linha:
+  . "~/.dotfiles/variaveis.sh"
+EOF
